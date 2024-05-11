@@ -1,0 +1,36 @@
+# DWM  - 2024  - notes.txt
+
+
+# wget <PATH.TO.PATCH>
+# https://dwm.suckless.org/patches/ 
+restartsig/dwm-restartsig-20180523-6.2.diff
+attachaside/dwm-attachaside-6.4.diff
+vanitygaps/dwm-vanitygaps-6.2.diff
+rotatestack/dwm-rotatestack-20161021-ab9571b.diff
+pertag/dwm-pertag-20200914-61bb8b2.diff
+hide_vacant_tags/dwm-hide_vacant_tags-6.4.diff
+https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20210714-138b405.diff
+
+
+# Add patch (in dwm dir)
+patch -p1 < <PATH.TO.DIFF>
+# IF success (or rej has been manualy patched)
+    make
+    sudo make install
+#
+
+# Base - Patching order
+restartsig                      # one hunk failed (dwm.c)                     # simple 2 line addition 
+vanitygaps                  # two hunks failed (dwm.c)                   # remove large function and simple line
+hide_vacant_tags        # No Errors                                             # No Errors
+pertag                          # No Erorrs                                             # No Erorrs
+attachaside                 # No Erorrs                                             # No Errors 
+fakefullscreen              # No Errors                                             # No Errors
+
+# Back up Base at this point!!!!
+
+#
+
+
+
+
