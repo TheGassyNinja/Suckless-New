@@ -91,6 +91,7 @@ static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *termcmd1[]  = { "kitty", "--hold", "kitten", "icat", "/home/thegassyninja/VOID_small.png",  NULL };
 
+
 static const char *scratch0cmd[]  = { "tdrop", "-am", "-w", "75%", "-x", "10%", "-y", "25%", "-n", "0", "kitty", "--class", "SCRATCH0",  NULL };
 static const char *scratch1cmd[]  = { "tdrop", "-am", "-w", "75%", "-h", "65%", "-y", "5%", "-x", "10%", "-n", "1", "kitty", "--class", "SCRATCH1", "-e", "ranger", NULL };
 static const char *scratch2cmd[]  = { "tdrop", "-am", "-w", "75%", "-h", "65%", "-y", "5%", "-x", "10%", "-n", "2", "kitty", "--class", "SCRATCH2", "-e", "bpytop", NULL };
@@ -99,6 +100,8 @@ static const Key keys[] = {
 	/* modifier                     				key        function        argument */
 	{ MODKEY,                       				XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,                      XK_p,      spawn,          {.v = roficmd } },
+	{ MODKEY,                      					XK_KP_Delete,      spawn,          SHCMD("/home/thegassyninja/Git/Suckless/dwm/Scripts/rofi-scripts.sh") },
+	{ 0,				                      					XK_Print,      spawn,          SHCMD("scrot '%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/Screenshots/'") },
 	{ MODKEY,						           		 XK_Return, spawn,          {.v  = termcmd } },
 	{ MODKEY|ShiftMask,             		 XK_Return, spawn,          {.v = termcmd1 } },
 	{ MODKEY,                       				XK_KP_Insert,      spawn,          {.v = scratch0cmd } },

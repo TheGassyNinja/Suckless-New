@@ -29,6 +29,13 @@ fakefullscreen              # No Errors                                         
 
 # Back up Base at this point!!!!
 
+# Extras
+
+#Xresources use 
+
+https://dwm.suckless.org/patches/xresources/dwm-xresources-20210827-138b405.diff
+xresources                    # 3 hunks falied                                  #config.def.h  
+
 #
 
 
